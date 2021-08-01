@@ -1,0 +1,45 @@
+#genero{
+    display: flex;
+    align-items: stretch;
+    flex-direction: row;
+}
+
+#genero aside{
+    flex: 1;
+}
+
+#genero main{
+    flex-direction: column;
+    flex: 4;
+    justify-content: center;
+
+    padding: 50px;
+}
+
+#genero main form{
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    margin-top: 32px;
+}
+
+#genero main form textarea{
+    border-radius: 8px;
+    padding: 32px;
+    font-size: xx-large;
+}
+
+#genero main form button{
+    border-radius: 8px;
+    margin-top: 32px;
+    max-width: 100px;
+    padding: 10px;
+    align-self: flex-end;
+
+    text-align: center;
+    cursor: pointer;
+}
+
+#genero main form button:hover{
+    opacity: 0.8;
+}

@@ -1,0 +1,9 @@
+#footer{
+    margin-top: 32px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#footer button{
+    size: 2000px;
+}

@@ -1,0 +1,44 @@
+#personalizar{
+    display: flex;
+    align-items: stretch;
+    flex-direction: row;
+}
+
+#personalizar aside{
+    flex: 1;
+}
+
+#personalizar main{
+    flex-direction: column;
+    flex: 4;
+    justify-content: center;
+
+    padding: 50px;
+}
+
+#personalizar main form{
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    margin-top: 32px;
+}
+
+#personalizar main form .container{
+    display:block
+
+}
+
+#personalizar main form button{
+    border-radius: 8px;
+    margin-top: 32px;
+    max-width: 100px;
+    padding: 10px;
+    align-self: flex-end;
+
+    text-align: center;
+    cursor: pointer;
+}
+
+#personalizar main form button:hover{
+    opacity: 0.8;
+}

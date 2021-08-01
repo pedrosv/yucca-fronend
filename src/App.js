@@ -1,24 +1,40 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Route } from "react-router-dom";
+import { createContext, useState } from "react";
 
-function App() {
+import Conteudo from "./pages/Conteudo";
+import Genero from "./pages/Genero";
+import Personalizar from "./pages/Personalizar"
+import Resultados from "./pages/Resultados"
+
+export const SearchValuesContext = createContext({});
+
+function App() { 
+
+  const [searchValues, setSearchValues] = useState(
+      { generos: "",
+        conteudos: "",
+        configs: {
+          maxPages:         100,
+          genero:           0.7,
+          url:              0.5,
+          conteudo:         0.3,
+          genero_conteudo:  0.5,
+          expansaoDeTermos: true,
+          heuristica:       "1"
+      }
+    });
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    
+    <BrowserRouter>
+      <SearchValuesContext.Provider value = {{searchValues, setSearchValues}}>
+        <Route path= "/" exact component={Genero}/>
+        <Route path= "/genero" component={Genero}/>
+        <Route path= "/conteudo" component={Conteudo}/>
+        <Route path= "/personalizar" component={Personalizar}/>
+        <Route path= "/resultados" component={Resultados}/>
+      </SearchValuesContext.Provider>
+    </BrowserRouter>
   );
 }
 

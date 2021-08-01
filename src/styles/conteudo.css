@@ -1,0 +1,46 @@
+#conteudo{
+    display: flex;
+    align-items: stretch;
+    flex-direction: row;
+}
+
+#conteudo aside{
+    flex: 1;
+}
+
+#conteudo main{
+    flex-direction: column;
+    flex: 4;
+    justify-content: center;
+
+    padding: 50px;
+}
+
+#conteudo main form{
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    margin-top: 32px;
+}
+
+#conteudo main form textarea{
+    border-radius: 8px;
+    padding: 32px;
+    font-size: xx-large;
+}
+
+#conteudo main form button{
+    border-radius: 8px;
+    margin-top: 32px;
+    max-width: 100px;
+    padding: 10px;
+    align-self: flex-end;
+
+    text-align: center;
+    cursor: pointer;
+
+}
+
+#conteudo main form button:hover{
+    opacity: 0.8;
+}
